@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="funkcje.cpp" />
+    <ClCompile Include="dane.cpp" />
+    <ClCompile Include="pobieranie.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="funkcje.h" />
+    <ClInclude Include="dane.h" />
+    <ClInclude Include="pobieranie.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

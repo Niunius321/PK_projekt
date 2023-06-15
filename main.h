@@ -1,7 +1,9 @@
 #pragma once
 #include <iostream>
+#include <list>
 #include <string>
 #include <vector>
 #include <fstream>
 #include <sstream>
-#include "funkcje.h"
+#include "pobieranie.h"
+#include "dane.h"
