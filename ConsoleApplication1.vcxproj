@@ -128,12 +128,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dane.cpp" />
-    <ClCompile Include="pobieranie.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="funkcje.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="dane.h" />
-    <ClInclude Include="pobieranie.h" />
+    <ClInclude Include="funkcje.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>

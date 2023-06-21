@@ -1,11 +1,8 @@
-#pragma once
 #include "main.h"
 
-class Dane{
-private:
-	std::string numer;
-	std::string ilosc;
-	std::string kto;
+class Dane {
 public:
-	Dane(std::string numer, std::string ilosc, std::string kto);
+	std::list<std::list<std::string>> dane;
+
+
 };

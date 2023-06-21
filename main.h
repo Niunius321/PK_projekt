@@ -5,5 +5,4 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
-#include "pobieranie.h"
-#include "dane.h"
+#include "funkcje.h"

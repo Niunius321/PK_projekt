@@ -1,1 +1,2 @@
-#include "dane.h"
+#include "main.h"
+
