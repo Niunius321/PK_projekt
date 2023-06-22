@@ -5,4 +5,5 @@
 #include <vector>
 #include <fstream>
 #include <sstream>
+#include <tuple>
 #include "funkcje.h"

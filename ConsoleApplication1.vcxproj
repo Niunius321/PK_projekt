@@ -127,12 +127,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="dane.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="funkcje.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="dane.h" />
     <ClInclude Include="funkcje.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
