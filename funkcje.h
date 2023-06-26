@@ -16,32 +16,42 @@ public:
 	void Wczytaj_dane(Dane& dane, std::string plik_wej);
 };
 //////////////////////////////
-class Zapis{
+class Zapis : public Dane{
 public:
-	void Save(Dane& dane,const std::string& plik_wej);
-	void Wypisz();
+	void Save(const Dane& dane,const std::string& plik_wej);
 };
 //////////////////////////////
 class Baza {
 public:
 	void Wypisz_dane(const Dane& dane);
 };
-class Szukaj : private Dane{
+class Szukaj{
+private:
+	Zapis zapis;
+	int tel;
+	std::string kto;
 public:
-	void Szukanie_tel(Dane& dane,int tel) {
-		std::vector<std::tuple<int, int, std::string>> dane1 = dane.Pobierz_dane1();
-		bool znalezione = false;
-		for (const auto& tuple : dane1) {
-			int szukane = std::get<0>(tuple);
-			if (tel == szukane) {
-				znalezione = true;
-				int ile = std::get<1>(tuple);
-				std::string kto = std::get<2>(tuple);
-				std::cout << "Znaleziono podany numer: " << tel << " " << ile << " " << kto << std::endl;
-			}
-		}
-		if (znalezione == false) {
-			std::cout << "Nie znaleziono w bazie takiego telefonu!";
-		}
-	}
+	void Szukanie_tel(Dane& dane, int tel,int wybor);
+};
+/////////////////////
+class Wybor {
+private: 
+	Wczytaj czyt;
+	Baza baza;
+	Szukaj szukaj;
+	Zapis zapis;
+	int wybor, tel;
+	std::string kto;
+public:
+	void Start(Dane& dane);
+};
+
+
+class Dodawanie_telefonu : public Dane {
+private:
+	Dane dane;
+	int tel;
+	std::string kto;
+public:
+	void Dodaj();
 };
