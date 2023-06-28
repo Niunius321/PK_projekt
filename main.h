@@ -6,4 +6,5 @@
 #include <fstream>
 #include <sstream>
 #include <tuple>
+#include <cctype>
 #include "funkcje.h"

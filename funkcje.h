@@ -2,18 +2,22 @@
 
 class Dane {
 private:
-	std::vector<std::tuple<int, int, std::string>> dane1;
+    std::list<std::list<std::string>> listaList;
 public:
+    void Dodaj(std::list<std::string> lista){
+        listaList.push_back(lista);
+    }
+    const std::list<std::list<std::string>>& Pobierz_dane() const{
+        return listaList;
+    }
 	void Dodaj_dane(std::tuple<int, int, std::string> lista);
 	void Wczytaj_dane(const std::string& plik_wej);
-	const std::vector<std::tuple<int, int, std::string>>& Pobierz_dane1() const {
-		return dane1;
-	}
+
 };
 /////////////////////////////////
 class Wczytaj {
 public:
-	void Wczytaj_dane(Dane& dane, std::string plik_wej);
+	void Wczytaj_dane(Dane& dane, const std::string plik_wej);
 };
 //////////////////////////////
 class Zapis : public Dane{
@@ -31,7 +35,7 @@ private:
 	int tel;
 	std::string kto;
 public:
-	void Szukanie_tel(Dane& dane, int tel,int wybor);
+	void Szukanie_tel(Dane& dane, std::string tel,int wybor);
 };
 /////////////////////
 class Wybor {
@@ -42,16 +46,9 @@ private:
 	Zapis zapis;
 	int wybor, tel;
 	std::string kto;
+    bool znalezione=false;
+    
 public:
 	void Start(Dane& dane);
 };
-
-
-class Dodawanie_telefonu : public Dane {
-private:
-	Dane dane;
-	int tel;
-	std::string kto;
-public:
-	void Dodaj();
-};
+/////////////////////
